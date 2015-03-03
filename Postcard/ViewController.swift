@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     //declare what each thing is called in the view
     
+    @IBOutlet weak var NameLabel: UILabel!
     @IBOutlet weak var MessageLabel: UILabel!
     @IBOutlet weak var EnterNameTextField: UITextField!
     @IBOutlet weak var EnterMessageTextField: UITextField!
@@ -35,6 +36,14 @@ class ViewController: UIViewController {
     // 4. once we press the button we want the text that was in the message box to dissapear so we get write something different if we like
     // 5. once we have pressed the button we want the keyboard to dissapear
     // 6. once we click the button we want the text to say mail sent to confirm something has happened to the user
+    
+    
+    //challenge tasks
+    
+    // 7. unhilde namelabel
+    // 8. put text from name box in namelabel
+    // 9. make text blue
+    // 10. clear name box
    
     // first we add the button
     @IBAction func SendMessageButton(sender: UIButton) {
@@ -45,7 +54,7 @@ class ViewController: UIViewController {
         // 2.
         MessageLabel.text = EnterMessageTextField.text
         
-        //3.
+        // 3.
         MessageLabel.textColor = UIColor.redColor()
         
         // 4.
@@ -57,6 +66,22 @@ class ViewController: UIViewController {
         // 6.
         MailButton.setTitle("Mail Sent", forState: UIControlState.Normal)
         
+        // 7.
+        NameLabel.hidden = false
+        
+        // 8.
+        NameLabel.text = EnterNameTextField.text
+        
+        //9 .
+        NameLabel.textColor = UIColor.blueColor()
+        
+        //10.
+        
+        EnterNameTextField.text = ""
+        
+        
+        
+        
     }
     
     // another button that simply clears the name and message boxes
@@ -64,6 +89,11 @@ class ViewController: UIViewController {
         
         EnterNameTextField.text = ""
         EnterMessageTextField.text = ""
+    }
+    @IBAction func ClearLabels(sender: UIButton) {
+        
+        NameLabel.text = ""
+        MessageLabel.text = ""
     }
     
 }

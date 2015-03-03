@@ -65,12 +65,12 @@
                                     <rect key="frame" x="289" y="185" width="80" height="80"/>
                                 </variation>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R77-ZI-97w">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R77-ZI-97w">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="32" y="273" width="338" height="30"/>
+                                    <rect key="frame" x="29" y="273" width="338" height="30"/>
                                 </variation>
                             </textField>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxH-56-Mqu">
@@ -87,7 +87,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="32" y="311" width="338" height="30"/>
+                                    <rect key="frame" x="29" y="311" width="338" height="30"/>
                                 </variation>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ape-aR-S6f">
@@ -95,25 +95,44 @@
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="tintColor" red="1" green="0.91700073806966342" blue="0.23998833658169705" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Send"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                    <rect key="frame" x="32" y="235" width="249" height="30"/>
+                                    <rect key="frame" x="29" y="235" width="249" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="SendMessageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YCK-LT-aMM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umU-kE-EQM">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cvs-cG-bjV">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="29" y="185" width="252" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Tz-tP-VLF">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Start Over">
+                                <state key="normal" title="Clear Message">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="32" y="349" width="70" height="30"/>
+                                    <rect key="frame" x="130" y="349" width="103" height="30"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umU-kE-EQM">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Clear Boxes">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="29" y="349" width="84" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="ClearFieldsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pv8-Zo-sqn"/>
+                                    <action selector="ClearLabels:" destination="BYZ-38-t0r" eventType="touchUpInside" id="46j-YQ-cjy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -125,6 +144,8 @@
                                 <exclude reference="cxH-56-Mqu"/>
                                 <exclude reference="iwq-9I-WLt"/>
                                 <exclude reference="ape-aR-S6f"/>
+                                <exclude reference="Cvs-cG-bjV"/>
+                                <exclude reference="8Tz-tP-VLF"/>
                                 <exclude reference="umU-kE-EQM"/>
                             </mask>
                         </variation>
@@ -135,6 +156,8 @@
                                 <include reference="cxH-56-Mqu"/>
                                 <include reference="iwq-9I-WLt"/>
                                 <include reference="ape-aR-S6f"/>
+                                <include reference="Cvs-cG-bjV"/>
+                                <include reference="8Tz-tP-VLF"/>
                                 <include reference="umU-kE-EQM"/>
                             </mask>
                         </variation>
@@ -144,6 +167,7 @@
                         <outlet property="EnterNameTextField" destination="R77-ZI-97w" id="wfL-0x-Hi6"/>
                         <outlet property="MailButton" destination="ape-aR-S6f" id="q9y-2U-cPW"/>
                         <outlet property="MessageLabel" destination="cxH-56-Mqu" id="wqW-f7-dlg"/>
+                        <outlet property="NameLabel" destination="Cvs-cG-bjV" id="I9V-Cl-DTk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
